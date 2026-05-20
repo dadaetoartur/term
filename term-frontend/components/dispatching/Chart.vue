@@ -4,7 +4,6 @@
 
 <script setup lang="ts">
 import Chart, { type ChartData, type ChartItem, type ChartOptions } from 'chart.js/auto';
-import 'chartjs-adapter-moment';
 import 'chartjs-adapter-date-fns';
 import { ru } from 'date-fns/locale';
 
