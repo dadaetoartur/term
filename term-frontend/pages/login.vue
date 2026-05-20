@@ -133,26 +133,10 @@ const schema = z.object({
 type Schema = z.infer<typeof schema>
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  // admin@example.com  initialPassword123
-  loading.value = true;
-
-  try {
-    await authStore.login({
-      username: event.data.username,
-      password: event.data.password,
-    });
-
-    router.push('/management');
-  } catch (error) {
-    toast.add({
-      title: 'Ошибка',
-      description: 'Неправильное имя пользователя или пароль',
-      icon: 'i-heroicons-exclamation-triangle',
-      color: 'red',
-    });
-  }
-
-  loading.value = false;
+  // mock login — skip backend call
+  const cookie = useCookie('term_backend_auth');
+  cookie.value = 'mock';
+  router.push('/management');
 }
 
 async function onError(event: FormErrorEvent) {
