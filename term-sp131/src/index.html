@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Свод правил строительная климатология СП 131.13330.2020 «СНиП 23-01-99* Строительная климатология»">
+    <title>Строительная климатология</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="zeroing.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body
+        link="#8693AB"
+        alink="#8693AB"
+        vlink="#8693AB"
+>
+<header>
+    <nav class="mainLinks">
+        <a class="headerLink" href="index.html">Главная</a>
+        <a class="headerLink" href="API.html">API</a>
+    </nav>
+</header>
+<header class="mobileHeader">
+    <svg  version="1.1" id="menuBurger" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px">
+        <path stroke="#8693AB" d="M0 2 H 25 M0 12 H 25 M0 22 H 25"/>
+    </svg>
+    <a class="headerLink" href="index.html">Главная</a>
+</header>
+<section class="table-container">
+    <div class="content-container">
+        <div class="form-group">
+            <h3 class="dal">Республика, край, область</h3>
+                <label style="color: var(--licorice)" for="order_region"></label>
+                <input type="text" list="regions-list" id="order_region" name="order_region" placeholder="Введите или выберите регион застройки">
+                <datalist class="form-control" id="regions-list">
+                        <option value="Алтайский край"></option>
+                        <option value="Амурская область"></option>
+                        <option value="Архангельская область"></option>
+                        <option value="Астраханская область"></option>
+                        <option value="Белгородская область"></option>
+                        <option value="Брянская область"></option>
+                        <option value="Владимирская область"></option>
+                        <option value="Волгоградская область"></option>
+                        <option value="Вологодская область"></option>
+                        <option value="Воронежская область"></option>
+                        <option value="Ивановская область"></option>
+                        <option value="Иркутская область"></option>
+                        <option value="Кабардино-Балкарская Республика"></option>
+                        <option value="Калининградская область"></option>
+                        <option value="Калужская область"></option>
+                        <option value="Камчатский край"></option>
+                        <option value="Карачаево-Черкесская Республика"></option>
+                        <option value="Кемеровская область"></option>
+                        <option value="Кировская область"></option>
+                        <option value="Костромская область"></option>
+                        <option value="Краснодарский край"></option>
+                        <option value="Красноярский край"></option>
+                        <option value="Курганская область"></option>
+                        <option value="Курская область"></option>
+                        <option value="Ленинградская область"></option>
+                        <option value="Липецкая область"></option>
+                        <option value="Магаданская область"></option>
+                        <option value="Московская область"></option>
+                        <option value="Мурманская область"></option>
+                        <option value="Ненецкий АО"></option>
+                        <option value="Нижегородская область"></option>
+                        <option value="Новгородская область"></option>
+                        <option value="Новосибирская область"></option>
+                        <option value="Омская область"></option>
+                        <option value="Оренбургская область"></option>
+                        <option value="Орловская область"></option>
+                        <option value="Пензенская область"></option>
+                        <option value="Пермский край"></option>
+                        <option value="Приморский край"></option>
+                        <option value="Псковская область"></option>
+                        <option value="Республика Адыгея"></option>
+                        <option value="Республика Алтай"></option>
+                        <option value="Республика Башкортостан"></option>
+                        <option value="Республика Бурятия"></option>
+                        <option value="Республика Дагестан"></option>
+                        <option value="Республика Калмыкия"></option>
+                        <option value="Республика Карелия"></option>
+                        <option value="Республика Коми"></option>
+                        <option value="Республика Марий Эл"></option>
+                        <option value="Республика Мордовия"></option>
+                        <option value="Республика Саха"></option>
+                        <option value="Республика Северная Осетия - Алания"></option>
+                        <option value="Республика Татарстан (Татарстан)"></option>
+                        <option value="Республика Тыва"></option>
+                        <option value="Республика Хакасия"></option>
+                        <option value="Ростовская область"></option>
+                        <option value="Рязанская область"></option>
+                        <option value="Самарская область"></option>
+                        <option value="Саратовская область"></option>
+                        <option value="Сахалинская область"></option>
+                        <option value="Свердловская область"></option>
+                        <option value="Смоленская область"></option>
+                        <option value="Ставропольский край"></option>
+                        <option value="Тамбовская область"></option>
+                        <option value="Тверская область"></option>
+                        <option value="Томская область"></option>
+                        <option value="Тульская область"></option>
+                        <option value="Тюменская область"></option>
+                        <option value="Удмуртская Республика"></option>
+                        <option value="Ульяновская область"></option>
+                        <option value="Хабаровский край"></option>
+                        <option value="Челябинская область"></option>
+                        <option value="Чеченская Республика"></option>
+                        <option value="Чувашская Республика"></option>
+                        <option value="Чукотский АО"></option>
+                        <option value="Ярославская область"></option>
+<!--                    <option value="Еврейская автономная область"></option> (включен в состав хабаровского края хз) -->
+                        <option value="Забайкальский край"></option>
+                        <option value="Республика Ингушетия"></option>
+<!--                    <option value="Республика Крым"></option> (нет в excel) -->
+<!--                    <option value="Севастополь"></option> (нет в excel) -->
+                        <option value="Донецкая область"></option>
+                        <option value="Луганская область"></option>
+                        <option value="Херсонская область"></option>
+                        <option value="Запорожская область"></option>
+<!--                    <option value="Санкт-Петербург"></option> (нет в excel!) -->
+<!--                    <option value="Москва"></option> (нет в excel!) -->
+<!--                    <option value="Ханты-Мансийский автономный округ - Югра"></option> (включен в состав тюменской хз)-->
+<!--                    <option value="Ямало-Ненецкий автономный округ"></option> (включен в состав тюменской область хз)-->
+                </datalist>
+
+            <h3>Населенный пункт, административный округ</h3>
+            <label style="color: var(--licorice);" for="order_city"><span class="label-text"></span></label>
+            <select class="form-control" id="order_city" name="order_city">
+                <option selected disabled></option>
+            </select>
+        </div>
+
+        <div class="mainTables">
+            <table class="climateParams">
+                <caption class="table-name">Таблица 3.1 - Климатические параметры холодного периода года</caption>
+                <tr>
+                    <th colspan="4" height="20px"><span  class="Region"></span> <span id="City" class="City"></span></th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="climat-name">Температура воздуха наиболее холодных суток, обеспеченностью 0.98</td>
+                    <td class="climat-val-cold"><span id="ColdTemp098"></span></td>
+                    <td>°С</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="climat-name">Температура воздуха наиболее холодных суток, обеспеченностью 0.92</td>
+                    <td class="climat-val-cold"><span id="ColdTemp092"></span></td>
+                    <td>°С</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="climat-name">Температура воздуха наиболее холодной пятидневки, обеспеченностью 0.98</td>
+                    <td class="climat-val-cold"><span id="ColdTemp098FiveDays"></span></td>
+                    <td>°С</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="climat-name">Температура воздуха наиболее холодной пятидневки, обеспеченностью 0.92</td>
+                    <td class="climat-val-cold"><span id="ColdTemp092FiveDays"></span></td>
+                    <td>°С</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td class="climat-name">Температура воздуха, обеспеченностью 0.94</td>
+                    <td class="climat-val-cold"><span id="ColdAirTemp094"></span></td>
+                    <td>°С</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="climat-name">Абсолютная минимальная температура воздуха</td>
+                    <td class="climat-val-cold"><span id="ColdAbsMinAirTemp"></span></td>
+                    <td>°С</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="climat-name">Средняя суточная амплитуда температуры воздуха наиболее холодного месяца</td>
+                    <td class="climat-val-cold"><span id="ColdAirTempMonthAvgAmp"></span></td>
+                    <td>°С</td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td class="climat-name">Продолжительность, сут, периода со среднесуточной температурой воздуха ≤0, °С</td>
+                    <td class="climat-val-cold"><span id="ColdDurationTempBelow0C"></span></td>
+                    <td>сут</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="climat-name">Средняя температура воздуха периода со средней суточной температурой воздуха ≤0, °С</td>
+                    <td class="climat-val-cold"><span id="ColdAvgTempBelow0С"></span></td>
+                    <td>°С</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="climat-name">Продолжительность, сут, периода со среднесуточной температурой воздуха ≤8, °С</td>
+                    <td class="climat-val-cold"><span id="ColdDurationTempBelow8C"></span></td>
+                    <td>сут</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="climat-name">Средняя температура воздуха периода со средней суточной температурой воздуха ≤8, °С</td>
+                    <td class="climat-val-cold"><span id="ColdAvgTempBelow8С"></span></td>
+                    <td>°С</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="climat-name">Продолжительность, сут, периода со среднесуточной температурой воздуха ≤10, °С</td>
+                    <td class="climat-val-cold"><span id="ColdDurationTempBelow10C"></span></td>
+                    <td>сут</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="climat-name">Средняя температура воздуха периода со средней суточной температурой воздуха ≤10, °С</td>
+                    <td class="climat-val-cold"><span id="ColdAvgTempBelow10С"></span></td>
+                    <td>°С</td>
+                </tr>
+
+                <tr>
+                    <td>14</td>
+                    <td class="climat-name">Средняя месячная относительная влажность воздуха наиболее холодного месяца</td>
+                    <td class="climat-val-cold"><span id="AvgRelHumidityColdMonth"></span></td>
+                    <td>%</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="climat-name">Средняя месячная относительная влажность воздуха в 15 ч наиболее холодного месяца</td>
+                    <td class="climat-val-cold"><span id="AvgRelHumidityColdMonth15PM"></span></td>
+                    <td>%</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td class="climat-name">Количество осадков за ноябрь-март</td>
+                    <td class="climat-val-cold"><span id="PrecipitationNovToMar"></span></td>
+                    <td>мм</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td class="climat-name">Преобладающее направлением ветра за декабрь - февраль </td>
+                    <td colspan="2" class="climat-val-cold"><span id="DominantWindDirectionDecToFeb"></span></td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td class="climat-name">Максимальная из средних скоростей ветра по румбам за январь </td>
+                    <td class="climat-val-cold"><span id="MaxAvgWindSpeedByCompassJan"></span></td>
+                    <td>м/с</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td class="climat-name">Средняя скорость ветра за период со средней суточной температурой воздуха ≤8, °С</td>
+                    <td class="climat-val-cold"><span id="ColdAvgSpeedWindTempBelow8"></span></td>
+                    <td>м/с</td>
+                </tr>
+            </table>
+
+            <table class="climateParams">
+                <caption class="table-name">Таблица 4.1 - Климатические параметры теплого периода года</caption>
+                <tr>
+                    <th colspan="4" height="20px"><span id="region_" class = "Region"></span> <span id="city_" class="City"></span></th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="climat-name">Барометрическое давление</td>
+                    <td class="climat-val"><span id="bar_davl"></span></td>
+                    <td>гПа</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="climat-name">Температура воздуха обеспеченностью 0.95</td>
+                    <td class="climat-val"><span id="ts_095"></span></td>
+                    <td>°С</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="climat-name">Температура воздуха обеспеченностью 0.98</td>
+                    <td class="climat-val"><span id="ts_098"></span></td>
+                    <td>°С</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="climat-name">Средняя максимальная температура воздуха наиболее теплого месяца</td>
+                    <td class="climat-val"><span id="t_sr_max"></span></td>
+                    <td>°С</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="climat-name">Абсолютная максимальная температура воздуха</td>
+                    <td class="climat-val"><span id="t_abs_max"></span></td>
+                    <td>°С</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="climat-name">Средняя суточная амплитуда температуры воздуха наиболее теплого месяца</td>
+                    <td class="climat-val"><span id="sr_sut_ampl_t"></span></td>
+                    <td>°С</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="climat-name">Средняя месячная относительная влажность воздуха наиболее теплого месяца</td>
+                    <td class="climat-val"><span id="sr_mes_vlaga"></span></td>
+                    <td>%</td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td class="climat-name">Средняя месячная относительная влажность воздуха в 15 ч наиболее теплого месяца</td>
+                    <td class="climat-val"><span id="sr_mes_vlaga_15"></span></td>
+                    <td>%</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="climat-name">Количество осадков за апрель - октябрь</td>
+                    <td class="climat-val"><span id="osadki_"></span></td>
+                    <td>мм</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="climat-name">Суточный максимум осадков</td>
+                    <td class="climat-val"><span id="sut_max_osadki"></span></td>
+                    <td>мм</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="climat-name">Преобладающее направление ветра за июнь - август</td>
+                    <td colspan="2" class="climat-val"><span id="napravl_vetra_"></span></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="climat-name">Минимальная из средних скоростей ветра по румбам за июль</td>
+                    <td class="climat-val"><span id="min_scor_vetra_rumb"></span></td>
+                    <td>м/с</td>
+                </tr>
+            </table>
+
+            <table class="climateParams horizontal_table" id="average-temp">
+                <caption class="table-name">Таблица 5.1 - Средняя месячная и годовая температуры воздуха</caption>
+                <tr>
+                    <th>Месяц</th>
+                    <th>I</th>
+                    <th>II</th>
+                    <th>II</th>
+                    <th>IV</th>
+                    <th>V</th>
+                    <th>VI</th>
+                    <th>VII</th>
+                    <th>VIII</th>
+                    <th>IX</th>
+                    <th>X</th>
+                    <th>XI</th>
+                    <th>XII</th>
+                    <th>Общегодовая</th>
+                </tr>
+                <tr>
+                    <th>Температура</th>
+                    <td class="yearClimate"></td>
+                    <td class="yearClimate"></td>
+                    <td class="yearClimate"></td>
+                    <td class="yearClimate"></td>
+                    <td class="yearClimate"></td>
+                    <td class="yearClimate"></td>
+                    <td class="yearClimate"></td>
+                    <td class="yearClimate"></td>
+                    <td class="yearClimate"></td>
+                    <td class="yearClimate"></td>
+                    <td class="yearClimate"></td>
+                    <td class="yearClimate"></td>
+                    <td class="yearClimate"></td>
+                </tr>
+            </table>
+
+            <table class="climateParams" id="DailyAmplitude_table">
+                <caption class="table-name">Таблица 6.1 - Максимальная суточная амплитуда температуры воздуха в июле</caption>
+                <thead>
+                    <tr>
+                        <th>Регион</th>
+                        <th>Населенный пункт</th>
+                        <th>Амплитуда</th>
+                    </tr>
+                </thead>
+            </table>
+
+            <table class="climateParams horizontal_table" id="VaporPressure_table">
+                <caption class="table-name">Таблица 7.1 - Среднее месячное и годовое парциальное давление водяного пара</caption>
+                <thead>
+                    <tr>
+                        <th>Месяц</th>
+                        <th>I</th>
+                        <th>II</th>
+                        <th>III</th>
+                        <th>IV</th>
+                        <th>V</th>
+                        <th>VI</th>
+                        <th>VII</th>
+                        <th>VIII</th>
+                        <th>IX</th>
+                        <th>X</th>
+                        <th>XI</th>
+                        <th>XII</th>
+                        <th>Год</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <th>Давление</th>
+                    <td class="vapor-pressure"></td>
+                    <td class="vapor-pressure"></td>
+                    <td class="vapor-pressure"></td>
+                    <td class="vapor-pressure"></td>
+                    <td class="vapor-pressure"></td>
+                    <td class="vapor-pressure"></td>
+                    <td class="vapor-pressure"></td>
+                    <td class="vapor-pressure"></td>
+                    <td class="vapor-pressure"></td>
+                    <td class="vapor-pressure"></td>
+                    <td class="vapor-pressure"></td>
+                    <td class="vapor-pressure"></td>
+                    <td class="vapor-pressure"></td>
+                </tr>
+            </table>
+
+            <table class="climateParams" id="SunRadiationHorizontal_table">
+                <caption class="table-name">Таблица 8.1 - Суммарная солнечная радиация (прямая и рассеянная) на горизонтальную поверхность при безоблачном небе</caption>
+                <thead>
+                    <tr>
+                        <th>Месяц</th>
+                        <th>40</th>
+                        <th>44</th>
+                        <th>48</th>
+                        <th>52</th>
+                        <th>56</th>
+                        <th>60</th>
+                        <th>64</th>
+                        <th>68</th>
+                    </tr>
+                </thead>
+            </table>
+
+            <table class="climateParams" id="SunRadiationVertical_table">
+                <caption class="table-name">Таблица 9.1 - Суммарная солнечная радиация (прямая и рассеянная) на вертикальную поверхность при безолачном небе</caption>
+                <thead>
+                    <tr>
+                        <th>Месяц</th>
+                        <th>Ориентация</th>
+                        <th>40</th>
+                        <th>44</th>
+                        <th>48</th>
+                        <th>52</th>
+                        <th>56</th>
+                        <th>60</th>
+                        <th>64</th>
+                        <th>68</th>
+                    </tr>
+                </thead>
+            </table>
+
+            <table class="climateParams horizontal_table" id="table_10_1">
+                <caption class="table-name">Таблица 10.1 - Климатические параметры для проектирования отопления, вентиляции и кондиционирования</caption>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Период года</th>
+                        <th rowspan="2">Барометрическое давление</th>
+                        <th colspan="3">Параметры A</th>
+                        <th colspan="3">Параметры B</th>
+                        <th rowspan="2">Средняя суточная амплитуда температуры воздуха</th>
+                    </tr>
+                    <tr>
+                        <th>температура воздуха</th>
+                        <th>удельная энтальпия</th>
+                        <th>скорость ветра</th>
+                        <th>температура воздуха</th>
+                        <th>удельная энтальпия</th>
+                        <th>скорость ветра</th>
+
+                    </tr>
+                </thead>
+            </table>
+
+            <table class="climateParams" id="Enthalpy_table">
+                <caption class="table-name">Таблица 10.2 - Удельная энтальпия и влагосодержание наружного воздуха в теплый период года для проектирования систем холодоснабжения</caption>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Наименование города</th>
+                        <th>Удельная энтальпия наружного воздуха обеспеченностью 0,98, кДж/кг</th>
+                        <th>Удельное влагосодержание воздуха г/кг</th>
+                    </tr>
+                </thead>
+            </table>
+
+            <table class="climateParams horizontal table" id="MonthlyAmplitude_table">
+                <caption class="table-name">Таблица 11.1 - Средняя и максимальная суточная амплитуда температуры наружного воздуха</caption>
+                <thead>
+                    <tr>
+                        <th>Месяц</th>
+                        <th>I</th>
+                        <th>II</th>
+                        <th>III</th>
+                        <th>IV</th>
+                        <th>V</th>
+                        <th>VI</th>
+                        <th>VII</th>
+                        <th>VIII</th>
+                        <th>IX</th>
+                        <th>X</th>
+                        <th>XI</th>
+                        <th>XII</th>
+                    </tr>
+                </thead>
+                    <tr>
+                        <th>Средняя амплитуда</th>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                    </tr>
+                    <tr>
+                        <th>Максимальная амплитуда</th>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                        <td class="avg-month-amplitude"></td>
+                    </tr>
+            </table>
+
+            <table class="climateParams" id="table_12_1">
+                <caption class="table-name">Таблица 12.1 - Суточный ход рассеянной (верхнее значение) и суммарной (нижнее значение) освещенности горизонтальной поверхности, клк</caption>
+                <thead>
+                <tr>
+                    <th rowspan="2">Месяцы</th>
+                    <th rowspan="2">Время восхода солнца</th>
+                    <th colspan="12">Часы суток</th>
+                    <th rowspan="2">Время захода солнца</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>4</th>
+                    <th>6</th>
+                    <th>8</th>
+                    <th>10</th>
+                    <th>12</th>
+                    <th>14</th>
+                    <th>16</th>
+                    <th>18</th>
+                    <th>20</th>
+                    <th>22</th>
+                    <th>24</th>
+                </tr>
+                <tr>
+                    <th colspan="15">Архангельск</th>
+                </tr>
+                </thead>
+            </table>
+
+            <table class="climateParams" id="table_13_1">
+                <caption class="table-name">Таблица 13.1 - Значения высоты солнца над горизонтом (градусы)</caption>
+                <thead>
+                <tr>
+                    <th>Географическая широта, градус с. ш</th>
+                    <th>I</th>
+                    <th>II</th>
+                    <th>III</th>
+                    <th>IV</th>
+                    <th>V</th>
+                    <th>VI</th>
+                    <th>VII</th>
+                    <th>VIII</th>
+                    <th>IX</th>
+                    <th>X</th>
+                    <th>XI</th>
+                    <th>XII</th>
+                </tr>
+                </thead>
+            </table>
+
+        </div>
+
+    </div>
+</section>
+<footer>
+    ООО "Бимифай"
+</footer>
+
+
+</body>
+<script src="selectCity.js"></script>
+</html>

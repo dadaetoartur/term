@@ -1,0 +1,18 @@
+/*ul[class],*/
+/*ol[class] {*/
+/*    padding: 0;*/
+/*}*/
+
+body,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd
+{
+    margin: 0;
+}

@@ -1,0 +1,51 @@
+# PyCharm / VSCode
+.idea
+.vscode
+
+# Local History for Visual Studio Code
+.history/
+
+# Mac/OSX
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.py[cod]
+*$py.class
+
+# Distribution poetry
+dist/
+
+# Authorization artifactory
+poetry.toml
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+report.xml
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Virtualenv
+.venv
+venv
+ 
+# Log file
+*.log
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json

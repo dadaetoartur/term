@@ -1,0 +1,315 @@
+:root {
+    --header-height: 50px;
+    --footer-padding: 25px;
+    --containerColor: #fdf6ee;
+    --containerColor2: #f8fde1;
+    --purple: #331832;
+    --cardHeight: 250px;
+    --paynesGrey: rgba(16, 17, 17, 0.63);
+    --licorice: #3d3132;
+    --adobe-color1: #7A98CC;
+    --adobe-color1-experimental: rgba(214, 224, 231, 0.24);
+    --adobe-color2: #3F629E;
+    --adobe-color3: #FFFFFF;
+    --adobe-color4: #4E5664;
+    --adobe-color5: #001333;
+}
+
+
+/*------------------------ ШАПКА ------------------------*/
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: var(--header-height);
+    width: 100%;
+    padding: 0;
+    color: #694D75;
+    letter-spacing: 1px;
+    border-bottom: solid 1px #181820;
+    background-color: var(--adobe-color4);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.mobileHeader {
+    display: none;
+}
+
+
+#hiddenMenu {
+    display: none;
+}
+
+
+.mainLinks {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    height: 60vh;
+    align-items: center;
+}
+
+
+.headerLink {
+    padding: 10px;
+    border-radius: 5px;
+    color: #fdf6ee;
+    border: 1px solid transparent;
+}
+
+
+.headerLink:hover {
+    border-width: 1px;
+    border-style: double;
+    border-color: #fdf6ee;
+}
+
+
+/*------------------------ ОБЩЕЕ ------------------------*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--licorice);
+    background-color: var(--adobe-color1-experimental);
+}
+
+
+.content-container {
+    min-height: calc(100vh
+    - var(--header-height)
+    - 2 * var(--footer-padding)
+    - 49px);
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFFFF;
+    border-radius: 0 0 20px 20px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+input{
+    display: block;
+    width: 300px;
+    height: 25px;
+}
+
+label {
+    display: block;
+}
+
+select {
+    display: block;
+    width: 309px;
+    height: 32px;
+}
+
+span th thead tr{
+    color: var(--licorice);
+}
+
+/*------------------------ ГЛАВНАЯ ------------------------*/
+
+.climateParams {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 45%;
+}
+
+.climateParams td, .climateParams th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    min-width: 30px;
+    justify-content: center;
+    text-align: center;
+    /*overflow-wrap: break-word;*/
+    /*max-width: 60px;*/
+}
+
+.climateParams tr:hover {background-color: #F2F1F1}
+
+
+.climateParams tr {
+    min-height: 100px;
+}
+
+.mainTables {
+    display: flex;
+    flex: 1 1 0;
+    /*width: 0;*/
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.table-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    caption-side: top;
+    text-align: left;
+}
+
+.table-number {
+    font-style: italic;
+    font-size: 14px;
+    color: #747177;
+    caption-side: top;
+    text-align: right;
+}
+
+.label-text {
+    font-size: 13px;
+    color: var(--paynesGrey);
+    font-style: italic;
+}
+
+
+section {
+}
+
+
+.form-group {
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+#table_10_1 td, #table_10_1 th{
+    max-width: 70px;
+    overflow-wrap: break-word;
+}
+
+#average-temp, #VaporPressure_table, #MonthlyAmplitude_table, #table_10_1 {
+    min-width: 40vw;
+    max-width: 50vw;
+}
+
+
+
+/*------------------------ ПОДВАЛ ------------------------*/
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    /*margin: 0 auto;*/
+    background-color: var(--adobe-color5);
+    color: #fdf6ee;
+    padding: 20px;
+    height: 100px;
+}
+
+p {
+    text-align: justify;
+}
+
+/*------------------------ Шрифты ------------------------*/
+@font-face {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/*------------------------ АДАПТИВНОСТЬ ------------------------*/
+
+@media screen and (max-width: 1020px) {
+    .content-container {
+        min-height: calc(100vh
+        - var(--header-height)
+        - 2 * var(--footer-padding)
+        - 9px);
+        width: 100%;
+    }
+
+    @media screen and (max-width: 900px) {
+        header {
+            display: none;
+        }
+
+        .mobileHeader {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: var(--header-height);
+            width: 100%;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #694D75;
+            letter-spacing: 1px;
+            border-bottom: solid 1px #181820;
+            background-color: var(--purple);
+        }
+
+        #menuBurgerContainer {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        #menuBurger {
+            padding: 0 15px;
+            cursor: pointer;
+        }
+
+        #hiddenMenu {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: calc(var(--header-height) - 1);
+            left: 0;
+            height: 100vh;
+            width: 80vw;
+            transform: translateX(-100%);
+            transition: transform 0.5s;
+            background-color: var(--purple);
+            border-top: 1px solid #694D75;
+        }
+        #hiddenMenu.active {
+            transform: translateX(0);
+        }
+
+
+        .cardContainer {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: var(--cardHeight);
+            width: 90%;
+            padding: 0 15px 15px;
+            margin: 25px auto 20px;
+            border: 2px solid var(--purple);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+
+        .images {
+            max-height: none;
+            width: 100%;
+        }
+
+        article {
+            margin-top: 20px;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--containerColor2);
+            padding: 10px;
+            border: 1px solid #d2cbc2;
+        }
+    }
+}
