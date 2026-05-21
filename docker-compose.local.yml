@@ -12,7 +12,6 @@ services:
     environment:
       NODE_ENV: production
       NUXT_PUBLIC_API_URL: http://localhost:3000/backend
-      BACKEND_INTERNAL_URL: http://term-backend:5000
     restart: always
     depends_on:
       - term-backend

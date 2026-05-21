@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   nitro: {
     routeRules: {
       '/backend/**': {
-        proxy: `${process.env.BACKEND_INTERNAL_URL || 'http://localhost:5000'}/**`,
+        proxy: 'http://term-backend:5000/**',
       },
     },
   },
