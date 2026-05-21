@@ -1,0 +1,87 @@
+name: term-local
+
+services:
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-local
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.local.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - term-backend
+      - term-frontend
+    restart: always
+
+  term-backend:
+    build:
+      context: term-backend
+      dockerfile: ./docker/Dockerfile
+    container_name: term-backend
+    env_file:
+      - term-backend/.env
+    restart: on-failure
+    depends_on:
+      postgres-local:
+        condition: service_healthy
+      minio-local:
+        condition: service_healthy
+
+  term-frontend:
+    build:
+      context: term-frontend
+      dockerfile: ./docker/Dockerfile
+    container_name: term-frontend
+    environment:
+      NODE_ENV: production
+      NUXT_PUBLIC_API_URL: http://localhost/backend
+    restart: always
+
+  postgres-local:
+    image: postgres:16.2-alpine
+    container_name: postgres-local
+    environment:
+      PGDATA: /data/postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d postgres -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    volumes:
+      - postgres_data:/data/postgres
+
+  minio-local:
+    image: minio/minio:RELEASE.2024-03-30T09-41-56Z
+    container_name: minio-local
+    command: server --console-address ":9001" /data/
+    environment:
+      MINIO_ROOT_USER: test_user
+      MINIO_ROOT_PASSWORD: test_password
+    volumes:
+      - minio_data:/data/
+    healthcheck:
+      test: ["CMD-SHELL", "timeout 5s bash -c ':> /dev/tcp/127.0.0.1/9000' || exit 1"]
+      interval: 5s
+      retries: 3
+      timeout: 5s
+      start_period: 10s
+
+  influxdb-local:
+    image: influxdb:2.7-alpine
+    container_name: influxdb-local
+    volumes:
+      - influxdb_data:/var/lib/influxdb
+    environment:
+      INFLUXDB_DB: db0
+      INFLUXDB_ADMIN_USER: user
+      INFLUXDB_ADMIN_PASSWORD: password
+
+volumes:
+  postgres_data: {}
+  minio_data: {}
+  influxdb_data: {}
