@@ -10,4 +10,5 @@ services:
       - "3000:3000"
     environment:
       NODE_ENV: production
+      API_URL: http://localhost:5000
     restart: always
