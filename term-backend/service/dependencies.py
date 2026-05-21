@@ -115,7 +115,10 @@ def get_fastapi_users() -> FastAPIUsers:
 
 @cache
 def get_allow_origins() -> list[str]:
-    return ["*"]
+    return [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ]
 
 
 @cache
