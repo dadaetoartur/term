@@ -2,17 +2,20 @@ name: term-local
 
 services:
 
-  nginx:
-    image: nginx:alpine
-    container_name: nginx-local
+  term-frontend:
+    build:
+      context: term-frontend
+      dockerfile: ./docker/Dockerfile
+    container_name: term-frontend
     ports:
-      - "80:80"
-    volumes:
-      - ./nginx/nginx.local.conf:/etc/nginx/nginx.conf:ro
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      NUXT_PUBLIC_API_URL: http://localhost:3000/backend
+      BACKEND_INTERNAL_URL: http://term-backend:5000
+    restart: always
     depends_on:
       - term-backend
-      - term-frontend
-    restart: always
 
   term-backend:
     build:
@@ -27,16 +30,6 @@ services:
         condition: service_healthy
       minio-local:
         condition: service_healthy
-
-  term-frontend:
-    build:
-      context: term-frontend
-      dockerfile: ./docker/Dockerfile
-    container_name: term-frontend
-    environment:
-      NODE_ENV: production
-      NUXT_PUBLIC_API_URL: http://localhost/backend
-    restart: always
 
   postgres-local:
     image: postgres:16.2-alpine
